@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Combined Embed</title>
+
+    <style>
+      :root {
+        /* Video will NOT grow when you make the Google Sites embed taller */
+        --video-height: 480px; /* change to 420px / 520px if you want */
+
+        /* Make this big enough so the whole “All-web” page appears */
+        --page2-height: 6000px; /* increase if needed (8000px, 10000px) */
+
+        --gap: 12px;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        /* IMPORTANT: avoid black empty area */
+        background: #fff; /* change to #000 if your Sites section is black */
+        scroll-behavior: smooth;
+      }
+
+      .video-wrap {
+        width: 100%;
+        height: var(--video-height);
+        background: #000;
+      }
+
+      .gap {
+        height: var(--gap);
+        background: transparent;
+      }
+
+      .page2-wrap {
+        width: 100%;
+        height: var(--page2-height);
+        background: #fff;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Video: scrolls away normally -->
+    <section class="video-wrap">
+      <iframe
+        src="https://johnsimsek.github.io/Websitecover-video/"
+        title="Website cover video"
+        loading="eager"
+        allow="autoplay; fullscreen; picture-in-picture"
+      ></iframe>
+    </section>
+
+    <div class="gap"></div>
+
+    <!-- Main site: very tall so the wrapper scrolls (video will disappear as you scroll) -->
+    <section class="page2-wrap">
+      <iframe
+        src="https://johnsimsek.github.io/All-web/"
+        title="All web"
+        loading="lazy"
+      ></iframe>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Combined Embed</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+
+      /* Let the page scroll naturally */
+      .section {
+        width: 100%;
+      }
+
+      /* Top video area */
+      .hero {
+        height: 70vh; /* change to 100vh if you want full screen */
+        min-height: 420px;
+      }
+
+      /* Content area (make it tall so you can scroll) */
+      .content {
+        height: 180vh; /* increase if you want more scrolling */
+        min-height: 900px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section hero">
+      <iframe
+        src="https://johnsimsek.github.io/Websitecover-video/"
+        title="Website cover video"
+        allow="autoplay; fullscreen; picture-in-picture"
+        loading="eager"
+      ></iframe>
+    </div>
+
+    <div class="section content">
+      <iframe
+        src="https://johnsimsek.github.io/All-web/"
+        title="All web"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </body>
+</html>
